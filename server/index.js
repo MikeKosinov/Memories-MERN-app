@@ -8,7 +8,6 @@ import postsRoutes from './routes/posts.js';
 
 const app = express();
 dotenv.config();
-//const CONNECTION_URL = 'mongodb+srv://mikekosinov:mikekosinov123@cluster0.ftkbv7a.mongodb.net/?retryWrites=true&w=majority';
 const PORT=process.env.PORT||3000;
 
 app.use(bodyParser.json({limit:'30mb',extended: true}));
@@ -27,9 +26,7 @@ const DBconnect = async()=>{
     }
     };
     DBconnect();
-// connectToDB().catch((error)=>console.log(error.message))
-// .then(()=>app.listen(PORT,()=>console.log(`Server running on port: ${PORT}`)))
-// .catch((error)=>console.log(`server doesn't started. Error: ${error}`));
+
  
 
 
